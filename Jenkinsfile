@@ -12,19 +12,25 @@ pipeline {
 
         stage('Stop Old Containers') {
             steps {
-                sh 'docker-compose down || true'
+                powershell '''
+                docker-compose down
+                '''
             }
         }
 
         stage('Build Docker Images') {
             steps {
-                sh 'docker-compose build'
+                powershell '''
+                docker-compose build
+                '''
             }
         }
 
         stage('Start Containers') {
             steps {
-                sh 'docker-compose up -d'
+                powershell '''
+                docker-compose up -d
+                '''
             }
         }
     }
