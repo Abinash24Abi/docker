@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h1>To Do list</h1>
+      <h1>ToDo list 😊</h1>
 
       <label>{editId ? 'Update' : 'Add'} Task</label>
       <br />
